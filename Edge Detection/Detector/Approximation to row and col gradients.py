@@ -18,6 +18,8 @@ normalized_gradient = cv2.normalize(gradient_magnitude, None, 0, 1, cv2.NORM_MIN
 # 設定閾值 t = 0.05，產生二值圖
 t = 0.045
 binary_map = (normalized_gradient >= t).astype(np.uint8) * 255  # 轉為 0 或 255
+# cv2.imwrite("D:/Edge Project/Processed Image/prcess_couple.jpg", binary_map)
+
 
 # 顯示結果
 plt.figure(figsize=(10, 5))
